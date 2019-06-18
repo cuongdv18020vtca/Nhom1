@@ -22,7 +22,9 @@ namespace PL_Console
             Console.WriteLine("-------------Them Xe----------------");
             Console.WriteLine("------------------------------------");
             MotorBL mtbl = new MotorBL();
-
+            string choice;
+            Menus menu = new Menus();
+            
             while (a == false)
             {
 
@@ -64,27 +66,53 @@ namespace PL_Console
                 Console.WriteLine("Nhap tinh trang xe : ");
 
                 motor.Motor_Status = Console.ReadLine().ToUpper();
-                mtbl.AddMotor(motor);
-                // try
-                // {
-
-                if (motor != mtbl.GetMotorByLicensePlate(motor.LicensePlate))
+                
+                try
                 {
-                    break;
+                    mtbl.AddMotor(motor);
+                    if (motor != mtbl.GetMotorByLicensePlate(motor.LicensePlate))
+                    {
+                        a = true;
+
+                    }
 
                 }
-
-                // }
-                // catch (System.Exception)
-                // {
-                else
+                catch (Exception e)
                 {
-
-                    Console.WriteLine("Xe nay da ton tai. Moi nhap lai: ");
+                    Console.WriteLine(e.Message);
                     a = false;
                 }
+                if (a==false)
+                {
+                    Console.WriteLine("XE DA TON TAI.BAN CO MUON NHAP LAI KHONG(Y/N)?");
+                     while (true)
+                    {
+                        choice = Console.ReadLine().ToUpper();
+                        if ((choice != "Y") && (choice != "N"))
+                        {
+                            Console.WriteLine("Ban chi duoc nhap Y/N. Moi nhap lai: ");
+                            choice = Console.ReadLine().ToUpper();
+                            continue;
+                        }
+                        break;
+                    }
+                    switch (choice)
+                    {
+                        case "Y":
 
-                //}
+                            continue;
+                        case "y":
+                            continue;
+                        case "N":
+                            menu.MenuManager(manager);
+                            break;
+                        case "n":
+                            menu.MenuManager(manager);
+                            break;
+                        default:
+                            continue;
+                    }
+                }
 
             }
             Console.WriteLine("Bam enter de quay lai:");
@@ -110,7 +138,7 @@ namespace PL_Console
                 int.Parse(a);
                 return true;
             }
-            catch (Exception e)
+            catch (SystemException)
             {
                 Console.WriteLine("{0} khong phai la so", a);
                 return false;
@@ -541,7 +569,7 @@ namespace PL_Console
             Console.Clear();
             MotorBL mtbl = new MotorBL();
             bool a = false;
-            bool b = false;
+           
             Customers customer = new Customers();
             Motor motor = new Motor();
             ContractBL contractBL = new ContractBL();
@@ -549,12 +577,12 @@ namespace PL_Console
             Console.WriteLine("---------------------------------------------------");
             Console.WriteLine("--------------Tra Xe----------");
             Console.WriteLine("--------------------------------------------------");
-           customer= InputCustomerReturnMotor();
-            motor=InputMotorReturnMotor();
-            
+            customer = InputCustomerReturnMotor();
+            motor = InputMotorReturnMotor();
+
             try
             {
-                contractBL.ReturnMotor(customer, motor,contract);
+                contractBL.ReturnMotor(customer, motor, contract);
                 a = true;
 
             }
@@ -562,16 +590,16 @@ namespace PL_Console
             {
 
                 Console.WriteLine(e.Message);
-                a= false;
+                a = false;
             }
-            if (a== true)
+            if (a == true)
             {
                 Console.WriteLine("TRA XE THANH CONG.");
             }
         }
         public Customers InputCustomerReturnMotor()
         {
-            bool a = false;
+           
             Customers customer = new Customers();
             Console.WriteLine("NHAP MA KHACH HANG: ");
             customer.CustomerID = CheckNumberPlus(Console.ReadLine());
