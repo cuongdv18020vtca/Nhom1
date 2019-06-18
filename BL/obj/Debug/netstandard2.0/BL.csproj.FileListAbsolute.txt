@@ -1,0 +1,15 @@
+C:\Users\Admin\Desktop\ProjectSem1PF04\Nhom1\BL\bin\Debug\netstandard2.0\BL.deps.json
+C:\Users\Admin\Desktop\ProjectSem1PF04\Nhom1\BL\bin\Debug\netstandard2.0\BL.dll
+C:\Users\Admin\Desktop\ProjectSem1PF04\Nhom1\BL\bin\Debug\netstandard2.0\BL.pdb
+C:\Users\Admin\Desktop\ProjectSem1PF04\Nhom1\BL\bin\Debug\netstandard2.0\DAL.dll
+C:\Users\Admin\Desktop\ProjectSem1PF04\Nhom1\BL\bin\Debug\netstandard2.0\Persistence.dll
+C:\Users\Admin\Desktop\ProjectSem1PF04\Nhom1\BL\bin\Debug\netstandard2.0\DAL.pdb
+C:\Users\Admin\Desktop\ProjectSem1PF04\Nhom1\BL\bin\Debug\netstandard2.0\Persistence.pdb
+C:\Users\Admin\Desktop\ProjectSem1PF04\Nhom1\BL\obj\Debug\netstandard2.0\BL.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\ProjectSem1PF04\Nhom1\BL\obj\Debug\netstandard2.0\BL.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\ProjectSem1PF04\Nhom1\BL\obj\Debug\netstandard2.0\BL.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\ProjectSem1PF04\Nhom1\BL\obj\Debug\netstandard2.0\BL.AssemblyInfo.cs
+C:\Users\Admin\Desktop\ProjectSem1PF04\Nhom1\BL\obj\Debug\netstandard2.0\BL.csproj.CopyComplete
+C:\Users\Admin\Desktop\ProjectSem1PF04\Nhom1\BL\obj\Debug\netstandard2.0\BL.dll
+C:\Users\Admin\Desktop\ProjectSem1PF04\Nhom1\BL\obj\Debug\netstandard2.0\BL.pdb
+C:\Users\Admin\Desktop\ProjectSem1PF04\Nhom1\BL\bin\Debug\netstandard2.0\ConnectionString.txt
